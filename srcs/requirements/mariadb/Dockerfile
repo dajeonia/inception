@@ -1,5 +1,6 @@
 FROM debian:11
 
+RUN env
 RUN apt update && apt upgrade -y
 RUN apt install mariadb-server -y
 RUN sed -i '/^bind-address/s/^/# /' /etc/mysql/mariadb.conf.d/50-server.cnf
